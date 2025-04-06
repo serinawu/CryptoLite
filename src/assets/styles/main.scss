@@ -1,0 +1,60 @@
+@import './variables';
+@import './base';
+
+html {
+  
+    body {
+        position: relative;
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+
+        .logo {
+            display: flex;
+            align-content: center;
+    
+            .brand-logo {
+                width: 25px;
+                height: 25px;
+                background: $primary-color;
+                margin-right: $spacing-md;
+                border-radius: 2px;
+                position: relative;
+    
+                &::before {
+                    content: "";
+                    width: inherit;
+                    height: inherit;
+                    background: $primary-color;
+                    border-radius: inherit;
+                    position: absolute;
+                    top: 80%;
+                    left: 80%;
+                    transform: translate(-50%, -50%);
+                }
+    
+                &::after {
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    background: $color-secondary;
+                    border-radius: inherit;
+                    position: absolute;
+                    top: 63%;
+                    left: 62%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+    
+            .brand-name {
+                font-size: 1.6rem;
+                font-weight: bold;
+                margin-left: $spacing-sm;
+            }
+        }
+    }
+}
